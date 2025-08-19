@@ -316,7 +316,7 @@ def render_report(args, elf_obj, prot, got, plt, syms, gadgets, binsh,
                   unsafe_funcs, fmt_suspects, base_info, runtime_base,
                   secinfo, relocinfo, deps, libc_info, og_info,
                   bof_offset_internal, ext_raw, ext_offset_num):
-    title = f"# AUTOBX-EDU Report v3\n\n"
+    title = f"# Binx Report \n\n"
     meta = f"- Generated: {datetime.now().isoformat(timespec='seconds')}\n- Binary: `{args.binary}`\n- Libc: `{args.libc or 'Not provided'}`\n\n"
 
     sec = "## Protections\n" + "\n".join([f"- **{k}**: {v}" for k, v in prot.items()]) + "\n\n"
@@ -456,10 +456,10 @@ def render_report(args, elf_obj, prot, got, plt, syms, gadgets, binsh,
 # ----------------------------- main ----------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="AUTOBX-EDU v3: Safe educational analyzer (no exploitation).")
+    parser = argparse.ArgumentParser(description="Binx analyzer toolkit.")
     parser.add_argument("--binary", required=True, help="Path to ELF binary")
     parser.add_argument("--libc", default=None, help="Optional path to matching libc for reference only")
-    parser.add_argument("--report", default="./autobx_report.md", help="Markdown report path (default: ./autobx_report.md)")
+    parser.add_argument("--report", default="./binx_report.md", help="Markdown report path (default: ./binx_report.md)")
     parser.add_argument("--json", default=None, help="Optional JSON export path")
     parser.add_argument("--runtime-base", action="store_true", help="Attempt benign run to sample runtime base address (PIE)")
     parser.add_argument("--one-gadget", type=int, default=5, help="Collect top-K one_gadget offsets if libc provided (default: 5)")
