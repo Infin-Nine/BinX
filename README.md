@@ -29,7 +29,7 @@ It is designed for educational and defensive research purposes only — it does 
 
 ### Clone Repository
 ```bash
-git clone https://github.com/Infin-Nine/BinX/binx.py
+git clone https://github.com/Infin-Nine/BinX.git
 cd BinX
 python3 binx.py --binary ./vuln_binary [options]
 ```
@@ -46,9 +46,16 @@ OPTIONS
 
 Example:-
  ~/tool/binx.py  --binary ret2csu --libc /lib/x86_64-linux-gnu/libc.so.6 --one-gadget 4 --auto-offset
+ 
 <img width="1920" height="1080" alt="Screenshot_2025-08-19_01_57_02" src="https://github.com/user-attachments/assets/551771c1-7a0a-409c-a3a7-3fa903565a47" />
 
 Report written to: /home/kali/binary/ctf/binx_report.md
+
 <img width="1920" height="1080" alt="Screenshot_2025-08-19_01_59_42" src="https://github.com/user-attachments/assets/61e9cc7e-ef38-41cd-bf7f-8c4c382fed29" />
+
+📄 report.md → Full Markdown analysis
+📦 result.json → Machine-readable export
+
+
 
 
