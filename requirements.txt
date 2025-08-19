@@ -1,0 +1,4 @@
+pyelftools
+pwntools
+rich
+pygments
