@@ -1,4 +1,1 @@
-pyelftools
 pwntools
-rich
-pygments
