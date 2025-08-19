@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BinX — Educational Binary Analyzer (SAFE)
+BinX — Binary Analyzer Toolkit 
 - Base address estimation (static + optional benign runtime sampling)
 - Automatic buffer-overflow offset finder using cyclic crash analysis (pwntools)
 - one_gadget offsets & constraints (if libc provided and one_gadget present)
